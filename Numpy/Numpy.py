@@ -85,9 +85,12 @@ print("sayilar2[-1,0]  =" + str(sayilar2[-1,0])) #son elemanın ilk elemanına u
 h = np.floor(10*np.random.random((3,4))) #0 dan 10 a kadar olan rastgele sayıların tam değeriyle oluşturulup 3 satır 4 sütunluk bir matris yazdırma
 print("h  =" + str(h))
 print("h.shape  =" + str(h.shape)) # (3,4)
-print("a.ravel()  =" + str(a.ravel())) #boyutunu 1 e indirerek değerleri yazma
-
-
+print("h.ravel()  =" + str(h.ravel())) #boyutunu 1 e indirerek değerleri yazma
+h = h.ravel()
+print("h.reshape(2,6)  =" + str(h.reshape(2,6)))
+h = h.reshape(2,6)
+print("h.T  =" + str(h.T)) #transpose alma -> 2 satır 6 sütunluk matrixi 6 satır 2 sütun halina getirme
+print("h.reshape(2,-1)  =" + str(h.reshape(2,-1))) #sütun sayısı 2 olsun satır sayısını da ona göre ayarla demek
 
 
 
