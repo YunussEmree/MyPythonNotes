@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import numpy as np
+#numpy docs: https://numpy.org/doc/stable/user/quickstart.html
 
 
 liste = [1,3,5,7,8,11,12,18]
@@ -56,13 +57,35 @@ print("f.dot(g)  =" +  str(f.dot(g))) #f ile g nin matris çarpımına alternati
 
 print("np.ones((2,5))  =" + str(np.ones((2,5)))) #2 satır 5 sütunluk 1 lerden oluşan bir matris yazdırdık
 print("np.zeros((2,5))  =" + str(np.zeros((2,5)))) #2 satır 5 sütunluk 0 lerden oluşan bir matris yazdırdık
+print("np.random.random(2,5)  =" + str(np.random.random((2,5)))) #0 ile 1 arasında rastgele sayılarla 2 satır 5 sütunluk bir matris yazdırdık
+print("np.sum(g)  =" + str(np.sum(g))) #tüm g elemanlarını toplama
+print("g.sum()  =" + str(g.sum())) #üsttekine alternatif
+print("np.min(g)  =" + str(np.min(g))) #g nin minimum değerini döndürür
+print("np.max(g)  =" + str(np.max(g))) #g nin maksimum değerini döndürür
+print("np.sqrt(g)  =" + str(np.sqrt(g))) #g değerlerinin kareköklerini alma
 
 
+sayilar = np.array([2,4,6,8,10,12,14])
+print("sayilar[0]  =" + str(sayilar[0])) #1. elemanı alma
+print("sayilar[0:3]  =" + str(sayilar[0:3])) #1. elemandan 4. elemana kadar olan sayıları alma. 4. eleman dahil değil.
+print("sayilar[]::-1]  =" + str(sayilar[::-1])) #sayilar listesini tersten sırala
+
+sayilar2 = np.array([[2,4,6],[8,10,12]])
+print("sayilar2[0]  =" + str(sayilar2[0])) #1. elemanı alma
+print("sayilar2[0,2]  =" + str(sayilar2[0,2])) #1. elemanın 3. elemanını alma
+print("sayilar2[:,2]  =" + str(sayilar2[:,2])) #tüm elemanların 3. elemanını alma
+print("sayilar2[:,0:2]  =" + str(sayilar2[:,0:2])) #tüm elemanların 1. elemanından 3. elemanına kadar olan sayıları alma
+print("sayilar2[::-1,::-1]  =" + str(sayilar2[::-1,::-1])) #elemanları ve elemanların elemanlarını tersten sırala
+print("sayilar2[:,::-1]  =" + str(sayilar2[:,::-1])) #sadece elemanların elemanlarını tersten sırala
+print("sayilar2[-1,:]  =" + str(sayilar2[-1,:])) #son elemana ulaşma
+print("sayilar2[-1,-1]  =" + str(sayilar2[-1,-1])) #son elemanın son elemanına ulaşma
+print("sayilar2[-1,0]  =" + str(sayilar2[-1,0])) #son elemanın ilk elemanına ulaşma
 
 
-
-
-
+h = np.floor(10*np.random.random((3,4))) #0 dan 10 a kadar olan rastgele sayıların tam değeriyle oluşturulup 3 satır 4 sütunluk bir matris yazdırma
+print("h  =" + str(h))
+print("h.shape  =" + str(h.shape)) # (3,4)
+print("a.ravel()  =" + str(a.ravel())) #boyutunu 1 e indirerek değerleri yazma
 
 
 
