@@ -33,3 +33,41 @@ print("c.dtype  =" + str(c.dtype))
 d = np.array([[2,3],[5,1],[4,1]])
 print("d  =" + str(d))
 print("d ndim  =" + str(d.ndim))
+
+
+e = np.linspace(1,10) #1 ile 10 dahil olmak üzere 50 tane eşit aralıklı sayı oluşturup listeliyor
+print("e  =" + str(e))
+
+e = np.linspace(1,10,10) #1 ile 10 dahil olmak üzere 10 tane eşit aralıklı sayı oluşturup listeliyor
+print("e  =" + str(e))
+
+e = np.linspace(1,10,5) #1 ile 10 dahil olmak üzere 5 tane eşit aralıklı sayı oluşturup listeliyor
+print("e  =" + str(e))
+
+
+f = np.array([20,30,40,50])
+g = np.arange(4)
+
+print("f-g  =" + str(f-g)) #f elemanlarından g elemanlarının çıkarılma sonucu
+print("g**2  =" + str(g**2)) #g nin elemanlarının karesi işlemi
+print("10*np.sin(a)  =" + str(10*np.sin(g)))
+print("f@g  =" + str(f@g)) #f ile g nin matris çarpımı
+print("f.dot(g)  =" +  str(f.dot(g))) #f ile g nin matris çarpımına alternatif metot
+
+print("np.ones((2,5))  =" + str(np.ones((2,5)))) #2 satır 5 sütunluk 1 lerden oluşan bir matris yazdırdık
+print("np.zeros((2,5))  =" + str(np.zeros((2,5)))) #2 satır 5 sütunluk 0 lerden oluşan bir matris yazdırdık
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
