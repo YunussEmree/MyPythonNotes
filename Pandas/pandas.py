@@ -56,10 +56,17 @@ print("df4.tail(1)  =\n" + str(df4.tail(1))) #en arkadaki veriyi çağırma. Ne 
 notlar = pd.read_csv("grades.csv")
 notlar.columns = ["İsim","Soyisim","SSN","Test1","Test2","Test3","Test4","Final","Sonuc"]
 print(notlar)
-print(str(notlar["İsim"]))
+print(notlar.loc[:5,"Test1":"Test4"]) #ilk 6 kişinin test notlarını getirme
+print(notlar.loc[:5,["İsim","Final"]]) #ilk 6 kişinin isim ve finallerini getirme
+print(notlar.loc[:5,:"Test2"]) #ilk 6 kişinin Test2 ye kadar olan tüm verileri getirme
 
 
 
+films = pd.read_csv("imdb-1000.csv")
+print(films.columns)
+print(films[["title","star_rating"]].head())
+print(films[films["star_rating"] > 8.5][["title","star_rating"]]) #imdb si 8.5 tan yüksek olan filmlerin isim ve imdb lerini getirme
+print(films[(films["star_rating"] > 8.5) & (films["star_rating"] < 9.0)][["title","star_rating"]]) #imdb si 8.5 ile 9.0 arasında olan filmlerin isim ve imdb lerini getirme
 
 
 
