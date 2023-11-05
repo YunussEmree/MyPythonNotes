@@ -35,6 +35,47 @@ df3 = pd.DataFrame(a3, columns=["İsim","Yaş","Şehir"], index=[1,2,3])
 print("df3  =\n" + str(df3))
 print("df3[İsim]  =\n" + str(df3["İsim"]))
 
-del df3["Şehir"]
+#del df3["Şehir"] #Şehir sütununu sildik
+#df3.pop("Şehir") #üsttekine alternatif
 
 print("df3  =\n" + str(df3))
+
+print("**************")
+
+print("df3.loc[1]  =\n" + str(df3.loc[1])) #indexi 1 olan kişinin bilgilerini yazdırdık
+print("df3.iloc[0]  =\n" + str(df3.iloc[0])) #sırası 1 olan kişinin bilgilerini yazdırdık, indexten farklı olarak veri sırasına bakıyor
+
+df4 = pd.concat([df2,df3])
+print("df4  =\n" + str(df4)) #append metotu kaldırılmış. #DataFrame birleştirme methodu
+print("**************")
+print("df4.head(1)  =\n" + str(df4.head(1))) #en öndeki veriyi çağırma. Ne kadar belirtirsen o kadar veri çağırır.
+print("df4.tail(1)  =\n" + str(df4.tail(1))) #en arkadaki veriyi çağırma. Ne kadar belirtirsen o kadar veri çağırır.
+
+
+
+notlar = pd.read_csv("grades.csv")
+notlar.columns = ["İsim","Soyisim","SSN","Test1","Test2","Test3","Test4","Final","Sonuc"]
+print(notlar)
+print(str(notlar["İsim"]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
