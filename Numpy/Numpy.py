@@ -93,6 +93,77 @@ print("h.T  =" + str(h.T)) #transpose alma -> 2 satır 6 sütunluk matrixi 6 sat
 print("h.reshape(2,-1)  =" + str(h.reshape(2,-1))) #sütun sayısı 2 olsun satır sayısını da ona göre ayarla demek
 
 
+i1 = np.floor(10*np.random.random((2,3)))
+i2 = np.floor(10*np.random.random((2,3)))
+print("i1  =" + str(i1))
+print("i2  =" + str(i2)) 
+
+i3 = np.vstack((i1,i2)) #vertical stack -> dikey biçimde verileri ekleme işlemi
+print("i3  =" + str(i3))
+i4 = np.hstack((i1,i2)) #horizontal stack -> yatay biçimde verileri ekleme işlemi
+print("i4  =" + str(i4))
+
+
+
+k = np.arange(10)
+print("k  =" + str(k))
+
+l = k
+
+print("l  =" + str(l))
+
+l[0] = 100
+print("k  =" + str(k))
+print("l  =" + str(l))
+#k yı değiştirmememize rağmen bu nasıl oldu?: aslında k nın değeri bellekte bir yer ve sen l yi k ya eşitlersen ikisini de aynı bellek kısmına atamış oluyorsun. Bu yüzden bir değerden değişince diğerinden de değişmiş oluyor.
+#olayın adı: referans ataması
+#bunun olmasını istemiyorsak:
+    
+    
+k = l.copy() #k artık l nin kopyası ve birinden değer değişince diğerini etkilemeyecek
+print("k  =" + str(k))
+k[0] = 1000
+print("k  =" + str(k))
+print("l  =" + str(l))
+    
+    
+    
+m = k.view() #m k nın görünüşüne sahip fakat birinde boyut değiştirirsek diğerinde değişmiyor.
+print("m  =" + str(m))
+print("k  =" + str(k))
+m[0] = 250
+print("m  =" + str(m))
+print("k  =" + str(k))
+m.shape = 2,5
+print("m  =" + str(m))
+print("k  =" + str(k))
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
