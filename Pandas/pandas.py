@@ -69,6 +69,36 @@ print(films[films["star_rating"] > 8.5][["title","star_rating"]]) #imdb si 8.5 t
 print(films[(films["star_rating"] > 8.5) & (films["star_rating"] < 9.0)][["title","star_rating"]]) #imdb si 8.5 ile 9.0 arasında olan filmlerin isim ve imdb lerini getirme
 
 
+print(films.query("star_rating>=8.5")[["title","star_rating"]]) #68. satır alternatifi
+
+
+print(films.groupby("genre").star_rating.mean()) #filmleri çeşitlere göre sırala ve bunların star rating ortalamasını göster
+
+
+films = films.drop("content_rating",axis=1).head() #content rating sütununu sildik.
+films = films.drop("actors_list",axis=1).head() #actors list sütununu sildik.
+films = films.drop(2,axis=0).head() #indexi 2 olan satır verisi silindi
+
+
+print(films.head)
+rowstodrop = [1,3,5,6,8,9]
+films = films.drop(rowstodrop,axis=0)
+
+print(films.head)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
